@@ -7,5 +7,14 @@
 </head>
 <body>
   <h1><%= date %></h1>
+  <ul>
+      <% for(let i = 0; i < todoListItems.length; i++) { %>
+        <li> <%= todoListItems[i] %> </li> 
+      <% } %>
+  </ul>
+  <form class="" action="/" method="post">
+    <input type="text" placeholder="Add List Item" name="listItem">
+    <button type="submit">Add</button>
+  </form>
 </body>
 </html>
