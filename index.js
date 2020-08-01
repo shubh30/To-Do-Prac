@@ -7,11 +7,13 @@ let listItems = ['Buy Food', 'Cook Food', 'Eat Food'];
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(express.static('public'));
+
 app.set('view engine', 'ejs');
 
 // Getting home page
 app.get('/', function (req, res) {
-  var options = {
+  let options = {
     weekday: 'long',
     year: 'numeric',
     month: 'long',
